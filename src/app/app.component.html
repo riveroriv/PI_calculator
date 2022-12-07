@@ -1,15 +1,8 @@
-<ul>
-	<li>
-    	<a [routerLink]="['pi']">PI</a>
-	</li>
-	<li>
-		<a [routerLink]="['calculadora']">Calculadora</a>
-	</li>
-	<li>
-	    <a [routerLink]="['conversiones']">Conversiones</a>
-	</li>
-	<li>
-    	<a [routerLink]="['mac']">MAC</a>
-	</li>
-</ul>
+<nav>
+	<a [routerLink]="['pi']">PI</a>
+	<span class="spacer"></span>
+	<a [routerLink]="['calculadora']">Calculadora</a>
+	<a [routerLink]="['conversiones']">Conversiones</a>
+	<a [routerLink]="['mac']">MAC</a>
+</nav>
 <router-outlet></router-outlet>

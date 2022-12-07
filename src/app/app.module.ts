@@ -7,6 +7,7 @@ import { InicioComponent } from './tabs/inicio/inicio.component';
 import { CalculadoraComponent } from './tabs/calculadora/calculadora.component';
 import { MacComponent } from './tabs/mac/mac.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { ConversionesComponent } from './tabs/conversiones/conversiones.component';
 
 const rutas:Routes = [
@@ -29,6 +30,7 @@ const rutas:Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(rutas),
   ],
   providers: [],
