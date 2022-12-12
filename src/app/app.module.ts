@@ -9,6 +9,11 @@ import { MacComponent } from './tabs/mac/mac.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ConversionesComponent } from './tabs/conversiones/conversiones.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTreeModule} from '@angular/material/tree';
 
 const rutas:Routes = [
   {path: '', component: InicioComponent, pathMatch: 'full'},
@@ -32,8 +37,13 @@ const rutas:Routes = [
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot(rutas),
+    BrowserAnimationsModule,
+
+    MatButtonModule,
+    MatIconModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

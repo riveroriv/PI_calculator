@@ -1,0 +1,33 @@
+.container{
+    margin: 5% 10%;
+}
+.container-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mac-input{
+    font-size: 2em;
+    border: none;
+    height: 50px;
+    width: 40%;
+    padding: 0 20px;
+    border-bottom: 2px solid var(--color-1);
+    text-align: center;
+
+}
+.mac-input:focus{
+    outline: none;
+    background-color: var(--color-2);
+}
+.mac-button{
+    border: none;
+    border-radius: 50%;
+    background-color: red;
+}
+@media screen and (max-width: 900px) {
+    .mac-input{
+        width: 90%;
+        font-size: 1.2em;
+    }
+}

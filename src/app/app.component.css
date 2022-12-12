@@ -1,5 +1,10 @@
+body{
+	height: 100vh;
+	overflow: hidden;
+}
 nav{
-	background-color: black;
+	height: 10vh;
+	background-color: var(--color-1);
 	color: white;
 
 	display: flex;
@@ -10,6 +15,45 @@ nav{
 }
 nav a{
 	color: white;
+	height: 100%;
+	padding: 0 20px;
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
 	text-decoration: none;
-	padding: 0 10px;
+
+	transition: all 0.4s ease;
+}
+nav a:hover{
+	background-color: var(--color-5);
+}
+nav a:focus{
+	background-color: var(--color-5);
+}
+#pi_logo{
+	height: 4vh;
+	padding-right: 10px;
+}
+#logo{
+	
+}
+.tab-view{
+	height: 90vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+@media screen and (max-width: 700px) {
+    nav{
+		max-width: 100%;
+		overflow: hidden;
+	}
+	nav a{
+		font-size: 1.8em;
+		padding: 0 7px;
+	}
+	nav a:focus{
+		padding: 0 25px;
+	}
 }

@@ -1,9 +1,61 @@
-<h2>MAC</h2>
-<p>no prueben mucho esto, que cuenta cuantas veces lo hacemos</p>
 <div class="container">
-    <input type="text" #mac class="mac">
-    <button (click)="llamarAPI(mac.value)">enviar</button>
+    <h2>MAC</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro accusamus saepe tempore, alias cupiditate, quae quia minus tempora pariatur accusantium facilis soluta delectus dicta nam numquam illum tenetur sed voluptatem!</p>
+<div class="container-input">
+    <input type="text" #mac class="mac-input" placeholder="00:00:00:00:00:00">
+    <button mat-icon-button><mat-icon>search</mat-icon></button>
 </div>
+
 <div class="info">
-    <a href="https://macaddress.io/api/documentation/output-format">ejemplo de respuesta</a>
+    <!--
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+            
+        <button mat-icon-button disabled></button>
+            {{node.name}}
+        </mat-tree-node>
+        <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+            <button mat-icon-button matTreeNodeToggle
+                [attr.aria-label]="'Toggle ' + node.name">
+            <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+            </button>
+        {{node.name}}
+        </mat-tree-node>
+    </mat-tree>
+    -->
+    <pre>
+        
+            "vendorDetails":
+                "oui":"FCFBFB",
+                "isPrivate":false,
+                "companyName":"Cisco Systems, Inc",
+                "companyAddress":"80 West Tasman Drive San Jose CA 94568 US",
+                "countryCode":"US"
+            
+            "blockDetails":
+                "blockFound":true,
+                "borderLeft":"FCFBFB000000",
+                "borderRight":"FCFBFBFFFFFF",
+                "blockSize":16777216,
+                "assignmentBlockSize":"MA-L",
+                "dateCreated":"2010-02-21",
+                "dateUpdated":"2015-09-27"
+            
+            "macAddressDetails"
+                "searchTerm":"FC:FB:FB:01:FA:21",
+                "isValid":true,
+                "virtualMachine":"Not detected",
+                "applications":[
+                    
+                ],
+                "transmissionType":"unicast",
+                "administrationType":"UAA",
+                "wiresharkNotes":"No details",
+                "comment":""
+        }
+    </pre>
+</div>
+
 </div>

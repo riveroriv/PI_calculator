@@ -1,3 +1,12 @@
+:root {
+    --color-1: #191919;
+    --color-2: #ced0ce;
+    --color-3: #e6e8e6;
+    --color-4: #ffffff;
+    --color-5: #F15025;
+}
+
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 

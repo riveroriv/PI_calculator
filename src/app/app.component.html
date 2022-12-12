@@ -1,8 +1,26 @@
 <nav>
-	<a [routerLink]="['pi']">PI</a>
+	<a [routerLink]="['pi']" id="logo">
+		<img src="/assets/PI_logo.svg" alt="PI" id="pi_logo" class="pi">
+		PI
+	</a>
+
 	<span class="spacer"></span>
-	<a [routerLink]="['calculadora']">Calculadora</a>
-	<a [routerLink]="['conversiones']">Conversiones</a>
-	<a [routerLink]="['mac']">MAC</a>
+
+	<a [routerLink]="['calculadora']">
+		<i class="fa-solid fa-calculator" *ngIf="small"></i>
+		<p *ngIf="!small">Calculadora</p>
+	</a>
+	
+	<a [routerLink]="['conversiones']">
+		<i class="fa-solid fa-retweet" *ngIf="small"></i>
+		<p *ngIf="!small">Conversiones</p>
+	</a>
+	
+	<a [routerLink]="['mac']">
+		<i class="fa-solid fa-location-dot" *ngIf="small"></i>
+		<p *ngIf="!small">MAC</p>
+	</a>
 </nav>
-<router-outlet></router-outlet>
+<div class="tab-view">
+	<router-outlet></router-outlet>
+</div>
