@@ -1,4 +1,5 @@
 import { Component, HostListener} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ export class AppComponent {
   title = 'pi_calculator';
 
   small: boolean = false;
+  pages: string[] = ["selected","","",""];
 
   public getScreenWidth: any;
   public getScreenHeight: any;
@@ -29,5 +31,9 @@ isSmall(){
   } else {
     this.small = false;
   }
+}
+select(page: number){
+  this.pages = ["","","",""];
+  this.pages[page] = "selected";
 }
 }

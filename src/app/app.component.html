@@ -1,22 +1,22 @@
 <nav>
-	<a [routerLink]="['pi']" id="logo">
+	<a [routerLink]="['pi']" id="logo" (click)="select(0)" class="{{pages[0]}}">
 		<img src="/assets/PI_logo.svg" alt="PI" id="pi_logo" class="pi">
 		PI
 	</a>
 
 	<span class="spacer"></span>
 
-	<a [routerLink]="['calculadora']">
+	<a [routerLink]="['calculadora']" (click)="select(1)" class="{{pages[1]}}">
 		<i class="fa-solid fa-calculator" *ngIf="small"></i>
 		<p *ngIf="!small">Calculadora</p>
 	</a>
 	
-	<a [routerLink]="['conversiones']">
+	<a [routerLink]="['conversiones']" (click)="select(2)" class="{{pages[2]}}">
 		<i class="fa-solid fa-retweet" *ngIf="small"></i>
 		<p *ngIf="!small">Conversiones</p>
 	</a>
 	
-	<a [routerLink]="['mac']">
+	<a [routerLink]="['mac']" (click)="select(3)" class="{{pages[3]}}">
 		<i class="fa-solid fa-location-dot" *ngIf="small"></i>
 		<p *ngIf="!small">MAC</p>
 	</a>

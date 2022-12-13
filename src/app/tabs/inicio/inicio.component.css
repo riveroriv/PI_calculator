@@ -7,7 +7,8 @@
 .container{
     min-height: 90vh;
     width: 100%;
-    background-color: var(--color-4);
+    background-color: var(--color-1);
+    color: var(--color-2);
 
     display: flex;
     flex-direction: row;
@@ -31,4 +32,13 @@ li{
     .content, #pi_page{
         margin: 20px 40px 20px 40px;
     }
+}
+#red{
+    fill: var(--color-5);
+}
+#back{
+    fill: var(--color-2);
+}
+#withe{
+    fill: var(--color-1);
 }

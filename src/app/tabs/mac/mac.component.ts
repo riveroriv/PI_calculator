@@ -8,7 +8,7 @@ import { MacService } from 'src/app/servicios/mac.service';
 })
 export class MacComponent implements OnInit {
 
-  info: string = "";
+  info: any = null;
 
   constructor(
     public macAPI: MacService
@@ -18,10 +18,9 @@ export class MacComponent implements OnInit {
   }
 
   llamarAPI(mac: string){
-    console.log('hola')
     if(mac.length >= 12){
       this.macAPI.macvendor(mac).subscribe({
-        next: (r) => console.log(r),
+        next: (r) => this.info = r,
         error: (r) => console.log(r)
       });
     }

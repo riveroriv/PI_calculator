@@ -1,5 +1,5 @@
 .container{
-    margin: 5% 10%;
+    margin: 5% 15%;
 }
 .container-input{
     display: flex;
@@ -14,16 +14,17 @@
     padding: 0 20px;
     border-bottom: 2px solid var(--color-1);
     text-align: center;
-
+    transition: all 0.3s;
 }
 .mac-input:focus{
     outline: none;
     background-color: var(--color-2);
 }
-.mac-button{
-    border: none;
-    border-radius: 50%;
-    background-color: red;
+.primero{
+    color: var(--color-1);
+}
+.segundo{
+    text-align: right;
 }
 @media screen and (max-width: 900px) {
     .mac-input{

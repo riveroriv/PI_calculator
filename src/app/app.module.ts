@@ -13,7 +13,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import {MatTreeModule} from '@angular/material/tree';
+import {MatListModule} from '@angular/material/list';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 const rutas:Routes = [
   {path: '', component: InicioComponent, pathMatch: 'full'},
@@ -26,12 +30,6 @@ const rutas:Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    InicioComponent,
-    CalculadoraComponent,
-    MacComponent
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -41,7 +39,18 @@ const rutas:Routes = [
 
     MatButtonModule,
     MatIconModule,
-    MatTreeModule
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  declarations: [
+    AppComponent,
+    InicioComponent,
+    ConversionesComponent,
+    CalculadoraComponent,
+    MacComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
