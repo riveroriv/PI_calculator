@@ -42,3 +42,6 @@ li{
 #withe{
     fill: var(--color-1);
 }
+h1{
+    font-size: 2.4em;
+}

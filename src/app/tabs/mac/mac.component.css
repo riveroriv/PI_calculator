@@ -31,4 +31,7 @@
         width: 90%;
         font-size: 1.2em;
     }
+    .container{
+        margin: 5% 10%;
+    }
 }

@@ -1,20 +1,20 @@
 <div class="container">
     <div class="bloque">
-        <h3>Decimal</h3>
+        <h2>Decimal</h2>
         <input matInput type="text" #dec (keyup)="valor(0, dec.value)" value="{{decimal}}"
         [formControl]="decControl" [errorStateMatcher]="matcher" class="{{decControl.status == 'INVALID'?'error':''}}"
         autocomplete="off"
         >
     </div>
     <div class="bloque">
-        <h3>Binario</h3>
+        <h2>Binario</h2>
         <input matInput type="text" #bin (keyup)="valor(1, bin.value)" value="{{binario}}"
         [formControl]="binControl" [errorStateMatcher]="matcher" class="{{binControl.status == 'INVALID'?'error':''}}"
         autocomplete="off"
         >
     </div>
     <div class="bloque">
-        <h3>Hexadecimal</h3>
+        <h2>Hexadecimal</h2>
         <input matInput type="text" #hex (keyup)="valor(2, hex.value)" value="{{hexadecimal}}"
         [formControl]="hexControl" [errorStateMatcher]="matcher" class="{{hexControl.status == 'INVALID'?'error':''}}"
         autocomplete="off"

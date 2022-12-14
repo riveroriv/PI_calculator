@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './tabs/inicio/inicio.component';
 import { CalculadoraComponent } from './tabs/calculadora/calculadora.component';
+import { GraficoComponent } from './grafico/grafico.component';
 import { MacComponent } from './tabs/mac/mac.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,6 +19,8 @@ import {MatListModule} from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 const rutas:Routes = [
   {path: '', component: InicioComponent, pathMatch: 'full'},
@@ -25,6 +28,7 @@ const rutas:Routes = [
   {path:'calculadora', component: CalculadoraComponent},
   {path:'mac', component: MacComponent},
   {path:'conversiones', component: ConversionesComponent},
+  {path:'grafico', component: GraficoComponent},
   
   {path:'**', component:InicioComponent}
 ];
@@ -43,14 +47,17 @@ const rutas:Routes = [
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    MatTooltipModule
   ],
   declarations: [
     AppComponent,
     InicioComponent,
     ConversionesComponent,
     CalculadoraComponent,
-    MacComponent
+    MacComponent,
+    GraficoComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

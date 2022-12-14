@@ -10,13 +10,18 @@
 		<i class="fa-solid fa-calculator" *ngIf="small"></i>
 		<p *ngIf="!small">Calculadora</p>
 	</a>
+
+	<a [routerLink]="['grafico']" (click)="select(2)" class="{{pages[2]}}">
+		<i class="fa-solid fa-scissors" *ngIf="small"></i>
+		<p *ngIf="!small">Subnet</p>
+	</a>
 	
-	<a [routerLink]="['conversiones']" (click)="select(2)" class="{{pages[2]}}">
+	<a [routerLink]="['conversiones']" (click)="select(3)" class="{{pages[3]}}">
 		<i class="fa-solid fa-retweet" *ngIf="small"></i>
 		<p *ngIf="!small">Conversiones</p>
 	</a>
 	
-	<a [routerLink]="['mac']" (click)="select(3)" class="{{pages[3]}}">
+	<a [routerLink]="['mac']" (click)="select(4)" class="{{pages[4]}}">
 		<i class="fa-solid fa-location-dot" *ngIf="small"></i>
 		<p *ngIf="!small">MAC</p>
 	</a>

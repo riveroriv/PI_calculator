@@ -1,0 +1,149 @@
+.grafico{
+    margin: 20px auto;
+    margin-bottom: 50px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    color: var(--color-2);
+}
+.caja{
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-5);
+    outline: 2px solid var(--color-4);
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    user-select: none;
+    cursor: pointer;
+}
+.caja:hover{
+    background-color: var(--color-1);
+    color: var(--color-4) !important;
+}
+.caja1{
+    width: 50%;
+    background-color: #003049;
+}
+.caja2{
+    width: 25%;
+    background-color: #d62828;
+}
+.caja3{
+    width: 12.5%;
+    background-color: #f77f00;
+}
+.caja4{
+    width: 6.25%;
+    background-color: #fcbf49;
+    color: var(--color-1);
+}
+.caja5{
+    width: 3.125%;
+    background-color: #eae2b7;
+    color: var(--color-1);
+}
+.first{
+    width: 100%;
+    margin: 20px auto;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.botones button{
+    margin: auto 10px;
+}
+.ip{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.segmento, .mask{
+    width: 120px;
+    height: 45px;
+    font-size: 30px;
+    margin: 20px;
+    outline: none;
+    border: none;
+    background-color: var(--color-2);
+    text-align: center;
+    transition: all 0.2s;
+}
+.segmento:focus, mask :focus{
+    background-color: var(--color-1);
+    color: var(--color-4);
+}
+.aplicar{
+    background-color: var(--color-1);
+    color: var(--color-4);
+    transition: all 0.4s;
+}
+.aplicar:hover{
+    background-color: var(--color-5);
+}
+.mat-column-pos, .mat-column-mask, .mat-column-ips, .mat-column-netDir, .mat-column-netBroadcast{
+    display: flex;
+    justify-content: center;
+}
+.mat-column-small{
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    .segmento{
+        width: 20%;
+        margin: 0;
+    }
+    .grafico{
+        height: 200px;
+        flex-wrap: wrap;
+    }
+    .caja{
+        border: none;
+        outline: 2px solid var(--color-4);
+    }
+    .caja1, .caja2, .caja3, .caja4, .caja5{
+        height: 100px;
+    }
+    .caja1{
+        width: 100%;
+    }
+    .caja2{
+        width: 50%;
+    }
+    .caja3{
+        width: 25%;
+    }
+    .caja4{
+        width: 12.5%;
+    }
+    .caja5{
+        width: 6.25%;
+    }
+    .mat-column-pos, .mat-column-netBroadcast, .mat-column-netDir{
+        display: none;
+    }
+    .mat-column-small{
+        display: flex;
+    }
+}
+.mat-row{
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.mat-row:hover{
+    background-color: var(--color-3);
+}
+.resaltado{
+    background-color: var(--color-1) !important;
+    color: var(--color-4) !important;
+}
+.rowresaltado{
+    background-color: var(--color-2) !important;
+}

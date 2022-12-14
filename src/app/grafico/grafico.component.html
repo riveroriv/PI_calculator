@@ -1,0 +1,68 @@
+<div class="first">
+    <div class="ip">
+        <input type="number" #seg1 class="segmento" value="192" min="1" max="255">.
+        <input type="number" #seg2 class="segmento" value="168" min="0" max="255">.
+        <input type="number" #seg3 class="segmento" value="10" min="0" max="255">.
+        <input type="number" #seg4 class="segmento" value="0" min="0" max="255">/
+        <input type="number" #mask class="mask" value="24" min="8" max="30">
+    </div>
+    <div class="botones">
+        <button mat-button class="aplicar" (click)="aplicar(seg1.value, seg2.value, seg3.value, seg4.value, mask.value)">
+            Aplicar / Reiniciar
+        </button>
+    </div>
+</div>
+
+<div class="grafico">
+    <div *ngFor="let net of nets; let i = index"
+    class="caja caja{{net.mask-maskBase}} animate__animated animate__bounceIn {{i == resaltado ? 'resaltado' : ''}}"
+    matTooltip="#{{i+1}} - {{net.netDir[0]}}.{{net.netDir[1]}}.{{net.netDir[2]}}.{{net.netDir[3]}}"
+    (click)="bifurcar(i, net)">
+        {{net.mask}}
+    </div>
+</div>
+
+<div class="tabla">
+    <mat-table [dataSource]="dataSource" matSort>
+
+		<ng-container matColumnDef="pos">
+			<mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
+			<mat-cell *matCellDef="let net; let i = index" data-label="código">{{i+1}}</mat-cell>
+		</ng-container>
+
+        <ng-container matColumnDef="small">
+			<mat-header-cell *matHeaderCellDef mat-sort-header>Red y Broadcast</mat-header-cell>
+			<mat-cell *matCellDef="let net" data-label="Red">
+                {{net.netDir[0]}}.{{net.netDir[1]}}.{{net.netDir[2]}}.{{net.netDir[3]}}
+                {{net.netBroadcast[0]}}.{{net.netBroadcast[1]}}.{{net.netBroadcast[2]}}.{{net.netBroadcast[3]}}
+            </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="netDir">
+			<mat-header-cell *matHeaderCellDef mat-sort-header>Red</mat-header-cell>
+			<mat-cell *matCellDef="let net" data-label="Red">
+                {{net.netDir[0]}}.{{net.netDir[1]}}.{{net.netDir[2]}}.{{net.netDir[3]}}
+            </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="netBroadcast">
+			<mat-header-cell *matHeaderCellDef mat-sort-header>Broadcast</mat-header-cell>
+			<mat-cell *matCellDef="let net" data-label="Broadcast">
+                {{net.netBroadcast[0]}}.{{net.netBroadcast[1]}}.{{net.netBroadcast[2]}}.{{net.netBroadcast[3]}}
+            </mat-cell>
+		</ng-container>
+
+		<ng-container matColumnDef="mask">
+			<mat-header-cell *matHeaderCellDef mat-sort-header>Máscara</mat-header-cell>
+			<mat-cell *matCellDef="let net" data-label="Máscara">{{net.mask}}</mat-cell>
+		</ng-container>
+        
+		<ng-container matColumnDef="ips">
+			<mat-header-cell *matHeaderCellDef mat-sort-header>Nro. hosts</mat-header-cell>
+			<mat-cell *matCellDef="let net" data-label="código">{{net.ips-2}}</mat-cell>
+		</ng-container>
+
+		<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+		<mat-row *matRowDef="let row; columns: displayedColumns; let i = index" (click)="resaltar(i)" class="{{i == resaltado ? 'rowresaltado' : ''}}"></mat-row>
+	</mat-table>
+</div>

@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'pi_calculator';
 
   small: boolean = false;
-  pages: string[] = ["selected","","",""];
+  pages: string[] = ["selected","","","",""];
 
   public getScreenWidth: any;
   public getScreenHeight: any;
@@ -33,7 +33,7 @@ isSmall(){
   }
 }
 select(page: number){
-  this.pages = ["","","",""];
+  this.pages = ["","","","",""];
   this.pages[page] = "selected";
 }
 }
