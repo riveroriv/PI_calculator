@@ -1,0 +1,80 @@
+.container{
+    margin: 50px;
+}
+#cidr {
+    width: 3em;
+    border: none;
+}
+#cidr{
+    outline: none;
+}
+.mat-radio-button {
+    margin-left: 16px;
+}
+table{
+    margin: 20px auto;  
+}
+table input {
+    width: 95%;
+    border: none;
+    text-align: center;
+    font-size: 1.5em;
+}
+table input:focus > td{
+    outline: none;
+    border-color: var(--color-1);
+}
+th, td:not(.espaciador) {
+    border: 3px solid var(--color-1);
+}
+tr.switchable td:hover:not(.espaciador) {
+    border-bottom: 3px solid var(--color-5);
+}
+tr.separable td:hover:not(.espaciador) {
+    border-right: 3px solid var(--color-5);
+}
+th, td {
+    width: 1.3em;
+    height: 2em;
+    text-align: center;
+}
+output {
+    border: 3px solid;
+}
+tr.ipaddrdec td:not(.espaciador), output.addressipdec {
+    border-color: var(--color-1);
+}
+.ipbin td:not(.espaciador) {
+    border-color: var(--color-1);
+    background-color: var(--color-1);
+    color: var(--color-4);
+}
+tr#maskDec td:not(.espaciador),
+output.cidr {
+    border-color: var(--color-6);
+}
+.maskbin td:not(.espaciador) {
+    border-color: var(--color-6);
+    background-color: var(--color-6);
+}
+.result td:not(.espaciador) {
+    border-color: var(--color-7);
+    background-color: var(--color-7);
+}
+.resultdec td:not(.espaciador),
+output.netiddec, 
+output.hostiddec,
+output.broadcastipdec {
+    border-color: var(--color-7);
+}
+table, tr {
+    border-style: none;
+    border-width: 0;
+}
+.espaciador {
+    border-bottom-style: none;
+    border-top-style: none;
+}
+.espaciador::after{
+    content: ".";
+}

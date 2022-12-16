@@ -1,1 +1,228 @@
-<p>calculadora works!</p>
+<div class="container">
+    <h1>Cálculo de direcciones IPv4</h1>
+<h2>Dirección IP</h2>
+
+<mat-radio-group aria-label="Escoge una opción">
+    <mat-radio-button value="1" #ipa color="warn">Clase A</mat-radio-button>
+    <mat-radio-button value="2" #ipb color="warn">Clase B</mat-radio-button>
+    <mat-radio-button value="3" #ipc color="warn">Clase C</mat-radio-button>
+</mat-radio-group>
+
+<table id="ipaddr">
+    <tr class="ipaddrdec">
+        <td colspan="8">
+            <input #ip1 type="number" min="0" max="223" step="1" value="192">
+        </td>
+        <td class="espaciador">
+        <td colspan="8">
+            <input #ip2 type="number" min="0" max="255" step="1" value="168">
+        </td>
+        <td class="espaciador">
+        <td colspan="8">
+            <input #ip3 type="number" min="0" max="255" step="1" value="1">
+        </td>
+        <td class="espaciador">
+        <td colspan="8">
+            <input #ip4 type="number" min="0" max="255" step="1" value="12">
+        </td>
+    </tr>
+    <tr id="ipbin" class="ipbin clickable switchable">
+        <td><td><td><td><td><td><td><td> <td class="espaciador">
+        <td><td><td><td><td><td><td><td> <td class="espaciador">
+        <td><td><td><td><td><td><td><td> <td class="espaciador">
+        <td><td><td><td><td><td><td><td>
+    </tr>
+</table>
+
+<label for="cidr">Prefijo de máscara: </label>
+<input id="cidr" type="number" min="1" max="30" step="1" value="24">
+
+<table>
+    <tr id="maskDec">
+        <td colspan="8"></td>
+        <td class="espaciador">
+        <td colspan="8"></td>
+        <td class="espaciador">
+        <td colspan="8"></td>
+        <td class="espaciador">  
+        <td colspan="8"></td>
+    </tr>
+    <tr id="mask" class="maskbin clickable separable">
+        <td><td><td><td><td><td><td><td>
+        <td class="espaciador">
+        <td><td><td><td><td><td><td><td>
+        <td class="espaciador">
+        <td><td><td><td><td><td><td><td>
+        <td class="espaciador">
+        <td><td><td><td><td><td><td><td>
+    </tr>
+</table>
+
+<h2>NetID</h2>
+<p>
+    El netID se obtiene realizando un AND binario entre la dirección IP y la máscara, lo que da :
+</p>
+<table id="netid">
+    <tr class="ipaddrdec" data-content="ipaddrdec">
+        <td colspan="8"> 
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+    </tr>
+    <tr class="ipbin clickable switchable">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+    </tr>
+    <tr class="maskbin clickable separable">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+    </tr>
+    <tr class="result" data-content="netid">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+    </tr>
+    <tr class="resultdec" data-content="netiddec">
+        <td colspan="8"> 
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+    </tr>
+</table>
+
+<p>
+    El NetID de la dirección <output class="addressipdec"></output>/<output class="cidr"></output> es <output class="netiddec"></output>
+</p>
+
+<h2>HostID</h2>
+<p>
+    El hostID se obtiene realizando un AND binario entre la dirección IP y la máscara invertida, es decir, cambiando todos los bits 0 a 1, y los bits 1 a 0 de la máscara.
+</p>
+<table id="hostid">
+    <tr class="ipaddrdec" data-content="ipaddrdec">
+        <td colspan="8"> 
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+    </tr>
+    <tr class="ipbin clickable switchable">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+    </tr>
+    <tr class="maskbin clickable separable">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+    </tr>
+    <tr class="result" data-content="hostid">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+    </tr>
+    <tr class="resultdec" data-content="hostiddec">
+        <td colspan="8"> 
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+    </tr>
+</table>
+
+<p>
+    El HostID de la dirección <output class="addressipdec"></output>/<output class="cidr"></output> es <output class="hostiddec"></output>
+</p>
+
+<h2>Broadcast</h2>
+<p>
+    Por definición, la dirección de broadcast se obtiene poniendo todos los bits de la parte hostId de la dirección IP a 1. Esto se consigue realizando un OR binario entre la dirección IP y la máscara inversa.
+</p>
+<table id="broadcast">
+    <tr class="ipaddrdec" data-content="ipaddrdec">
+        <td colspan="8"> 
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+    </tr>
+    <tr class="ipbin clickable switchable">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+    </tr>
+    <tr class="maskbin clickable separable">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+    </tr>
+    <tr class="broadcast result">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+        <td class="espaciador">
+        <td> <td> <td> <td> <td> <td> <td> <td>
+    </tr>
+    <tr class="broadcastdec resultdec">
+        <td colspan="8"> 
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+        <td class="espaciador">
+        <td colspan="8">
+    </tr>
+</table>
+
+<p>
+    El broadcast de la dirección <output class="addressipdec"></output>/<output class="cidr"></output> es <output class="broadcastipdec"></output>
+</p>
+</div>

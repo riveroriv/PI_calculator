@@ -22,6 +22,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatRadioModule} from '@angular/material/radio';
 
 const rutas:Routes = [
   {path: '', component: InicioComponent, pathMatch: 'full'},
@@ -51,7 +52,8 @@ const rutas:Routes = [
     ReactiveFormsModule,
     MatTableModule,
     MatTooltipModule,
-    MatDividerModule
+    MatDividerModule,
+    MatRadioModule
   ],
   declarations: [
     AppComponent,

@@ -1,18 +1,18 @@
 <div class="first">
     <div class="ip">
-        <input matInput type="number" #seg1 
+        <input matInput type="number" #seg1 step="1"
             [formControl]="seg1Control" [errorStateMatcher]="matcher"
             class="segmento" value="{{seg1}}" min="1" max="223" autocomplete="off">.
-        <input matInput type="number" #seg2 
+        <input matInput type="number" #seg2 step="1"
             [formControl]="seg2Control" [errorStateMatcher]="matcher"
             class="segmento" value="{{seg2}}" min="0" max="255" autocomplete="off">.
-        <input matInput type="number" #seg3 
+        <input matInput type="number" #seg3 step="1"
             [formControl]="seg3Control" [errorStateMatcher]="matcher"
             class="segmento" value="{{seg3}}" min="0" max="255" autocomplete="off">.
-        <input matInput type="number" #seg4 
+        <input matInput type="number" #seg4 step="1"
             [formControl]="seg4Control" [errorStateMatcher]="matcher"
             class="segmento" value="{{seg4}}" min="0" max="255" autocomplete="off">/
-        <input matInput type="number" #mask 
+        <input matInput type="number" #mask step="1"
             [formControl]="maskControl" [errorStateMatcher]="matcher"
             class="mask"     value="{{mask}}"  min="8" max="30"  autocomplete="off">
     </div>
