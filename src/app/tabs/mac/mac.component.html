@@ -1,13 +1,19 @@
 <div class="container">
-    <h2>MAC</h2>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro accusamus saepe tempore, alias cupiditate, quae quia minus tempora pariatur accusantium facilis soluta delectus dicta nam numquam illum tenetur sed voluptatem!</p>
+    <h1>MAC</h1>
+    <p>
+        La dirección MAC o también llamado "Media Access Control" es un identificador único que cada fabricante le asigna a la tarjeta de red de sus dispositivos conectados, desde un ordenador o móvil hasta routers, impresoras u otros dispositivos.
+    </p>
+    <p>
+        La dirección MAC está conformada por 48 bits agrupados por 6 octetos, donde 3 identifican al fabricante y los otros 3 corresponden al NIC o modelo del dispositivo.
+    </p>    
 <div class="container-input">
     <input type="text" #mac class="mac-input" placeholder="00:00:00:00:00:00">
     <button mat-icon-button (click)="llamarAPI(mac.value)"><mat-icon>search</mat-icon></button>
 </div>
 
 <div class="info" *ngIf="info!=null">
-    <h3>Detalles del proveedor</h3>
+    <mat-divider></mat-divider>
+    <h2>Detalles del proveedor</h2>
     <mat-list role="list">
         <mat-list-item role="listitem">
             <span class="primero">OUI</span>
@@ -46,7 +52,8 @@
         </mat-list-item>
     </mat-list>
 
-    <h3>Detalles del bloque</h3>
+    <mat-divider></mat-divider>
+    <h2>Detalles del bloque</h2>
     <mat-list role="list">
         <mat-list-item role="listitem">
             <span class="primero">Encontrado</span>
@@ -105,7 +112,8 @@
         </mat-list-item>
     </mat-list>
 
-    <h3>Detalles dirección MAC</h3>
+    <mat-divider></mat-divider>
+    <h2>Detalles dirección MAC</h2>
     <mat-list role="list">
         <mat-list-item role="listitem">
             <span class="primero">Buscado</span>

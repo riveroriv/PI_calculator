@@ -1,19 +1,14 @@
 <nav>
-	<a [routerLink]="['pi']" id="logo" (click)="select(0)" class="{{pages[0]}}">
+	<a [routerLink]="['inicio']" id="logo" (click)="select(0)" class="{{pages[0]}}">
 		<img src="/assets/PI_logo.svg" alt="PI" id="pi_logo" class="pi">
 		PI
 	</a>
 
 	<span class="spacer"></span>
 
-	<a [routerLink]="['calculadora']" (click)="select(1)" class="{{pages[1]}}">
-		<i class="fa-solid fa-calculator" *ngIf="small"></i>
-		<p *ngIf="!small">Calculadora</p>
-	</a>
-
 	<a [routerLink]="['grafico']" (click)="select(2)" class="{{pages[2]}}">
 		<i class="fa-solid fa-scissors" *ngIf="small"></i>
-		<p *ngIf="!small">Subnet</p>
+		<p *ngIf="!small">Subred</p>
 	</a>
 	
 	<a [routerLink]="['conversiones']" (click)="select(3)" class="{{pages[3]}}">
@@ -24,6 +19,11 @@
 	<a [routerLink]="['mac']" (click)="select(4)" class="{{pages[4]}}">
 		<i class="fa-solid fa-location-dot" *ngIf="small"></i>
 		<p *ngIf="!small">MAC</p>
+	</a>
+	
+	<a [routerLink]="['ip']" (click)="select(1)" class="{{pages[1]}}">
+		<i class="fa-solid fa-magnifying-glass" *ngIf="small"></i>
+		<p *ngIf="!small">IPv4</p>
 	</a>
 </nav>
 <div class="tab-view">

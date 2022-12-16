@@ -1,3 +1,6 @@
+p{
+    text-align: justify;
+}
 .container{
     margin: 5% 15%;
 }
@@ -22,9 +25,22 @@
 }
 .primero{
     color: var(--color-1);
+    max-width: 50%;
 }
 .segundo{
     text-align: right;
+    max-width: 50%;
+}
+.mat-divider{
+    margin: 20px auto;
+}
+.mat-list-item{
+    height: max-content !important;
+    min-height: 48px !important;
+    padding: 20px 10px 0 10px !important;
+}
+.mat-list-item:hover{
+    background-color: var(--color-2);
 }
 @media screen and (max-width: 900px) {
     .mac-input{

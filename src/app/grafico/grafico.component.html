@@ -1,14 +1,27 @@
 <div class="first">
     <div class="ip">
-        <input type="number" #seg1 class="segmento" value="192" min="1" max="255">.
-        <input type="number" #seg2 class="segmento" value="168" min="0" max="255">.
-        <input type="number" #seg3 class="segmento" value="10" min="0" max="255">.
-        <input type="number" #seg4 class="segmento" value="0" min="0" max="255">/
-        <input type="number" #mask class="mask" value="24" min="8" max="30">
+        <input matInput type="number" #seg1 
+            [formControl]="seg1Control" [errorStateMatcher]="matcher"
+            class="segmento" value="{{seg1}}" min="1" max="223" autocomplete="off">.
+        <input matInput type="number" #seg2 
+            [formControl]="seg2Control" [errorStateMatcher]="matcher"
+            class="segmento" value="{{seg2}}" min="0" max="255" autocomplete="off">.
+        <input matInput type="number" #seg3 
+            [formControl]="seg3Control" [errorStateMatcher]="matcher"
+            class="segmento" value="{{seg3}}" min="0" max="255" autocomplete="off">.
+        <input matInput type="number" #seg4 
+            [formControl]="seg4Control" [errorStateMatcher]="matcher"
+            class="segmento" value="{{seg4}}" min="0" max="255" autocomplete="off">/
+        <input matInput type="number" #mask 
+            [formControl]="maskControl" [errorStateMatcher]="matcher"
+            class="mask"     value="{{mask}}"  min="8" max="30"  autocomplete="off">
     </div>
     <div class="botones">
         <button mat-button class="aplicar" (click)="aplicar(seg1.value, seg2.value, seg3.value, seg4.value, mask.value)">
-            Aplicar / Reiniciar
+            Aplicar
+        </button>
+        <button mat-button class="aplicar" (click)="reiniciar()">
+            Reiniciar
         </button>
     </div>
 </div>

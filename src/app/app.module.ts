@@ -21,11 +21,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatDividerModule} from '@angular/material/divider';
 
 const rutas:Routes = [
   {path: '', component: InicioComponent, pathMatch: 'full'},
-  {path:'pi', component: InicioComponent},
-  {path:'calculadora', component: CalculadoraComponent},
+  {path:'inicio', component: InicioComponent},
+  {path:'ip', component: CalculadoraComponent},
   {path:'mac', component: MacComponent},
   {path:'conversiones', component: ConversionesComponent},
   {path:'grafico', component: GraficoComponent},
@@ -49,7 +50,8 @@ const rutas:Routes = [
     FormsModule,
     ReactiveFormsModule,
     MatTableModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDividerModule
   ],
   declarations: [
     AppComponent,

@@ -20,4 +20,11 @@
         autocomplete="off"
         >
     </div>
+    <div class="bloque">
+        <h2>Octal</h2>
+        <input matInput type="text" #oct (keyup)="valor(3, oct.value)" value="{{octal}}"
+        [formControl]="octControl" [errorStateMatcher]="matcher" class="{{octControl.status == 'INVALID'?'error':''}}"
+        autocomplete="off"
+        >
+    </div>
 </div>
