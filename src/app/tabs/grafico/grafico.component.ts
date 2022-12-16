@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatTable, MatTableDataSource} from '@angular/material/table';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
-import { MyErrorStateMatcher } from '../tabs/conversiones/conversiones.component';
+import { MyErrorStateMatcher } from '../conversiones/conversiones.component';
 
 export interface Net {
   mask        : number,

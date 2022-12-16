@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './tabs/inicio/inicio.component';
 import { CalculadoraComponent } from './tabs/calculadora/calculadora.component';
-import { GraficoComponent } from './grafico/grafico.component';
+import { GraficoComponent } from './tabs/grafico/grafico.component';
 import { MacComponent } from './tabs/mac/mac.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
