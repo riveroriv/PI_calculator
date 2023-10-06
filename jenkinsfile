@@ -6,8 +6,7 @@ pipeline {
         maven 'MVN3'
     }
     environment {
-        // SERVER_DEV_SFE_CREDENTIAL = credentials('server.sfe.credential')
-        PATH_BACKEND_API_WS = "${WORKSPACE}/"
+       
     }
     stages {
         stage('Descargando de repositorio.') {
@@ -24,26 +23,20 @@ pipeline {
                     stages{
                         stage("Compilando Backend") {
                             steps {
-                                ws(env.PATH_BACKEND_API_WS) {
-                                    sh 'mvn clean compile'
-                                }
+                               sh 'mvn clean compile'
                             }
                         }
 
                         stage('Junit') {
                             steps {
-                                ws(env.PATH_BACKEND_API_WS) {
                                     sh 'mvn clean'
-                                }
                             }
                         }
 
                         stage('SonarQube') {
                             steps {
-                                dir(env.PATH_BACKEND_API_WS) {
-                                    withSonarQubeEnv('SonarQube') {
-                                        sh 'mvn clean package sonar:sonar -Dmaven.test.skip=true'
-                                    }
+                                withSonarQubeEnv('SonarQube') {
+                                    sh 'mvn clean package sonar:sonar -Dmaven.test.skip=true'
                                 }
                             }
                         }
@@ -74,10 +67,8 @@ pipeline {
                 stages{
                     stage('Compilando para despliegue') {
                         steps {
-                            ws(env.PATH_BACKEND_API_WS) {
-                                sh "mvn clean package -Dmaven.test.skip=true"
+                            sh "mvn clean package -Dmaven.test.skip=true"
                             }
-                        }
                     }
                 }
             }
