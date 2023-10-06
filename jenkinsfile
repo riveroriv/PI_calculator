@@ -5,9 +5,6 @@ pipeline {
     tools {
         maven 'MVN3'
     }
-    environment {
-       
-    }
     stages {
         stage('Descargando de repositorio.') {
             steps {
